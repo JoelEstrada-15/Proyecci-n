@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTE</title>
+    <link rel="stylesheet" href="styles/normalize.css">  <!--Agregar fuentes y estilos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="main-nav">
+            <nav>
+                <a href="#"><i class="ph ph-book-bookmark"></i>Inicio</a>  <!--Navegación principal-->
+                <a href="#"><i class="ph ph-books"></i>Libros</a>
+                <a href="#"><i class="ph ph-pen-nib"></i>Artistas</a>
+                <a href="#"><i class="ph ph-address-book"></i>Sobre mi</a>
+            </nav>  
+        </div> <!--.hero-->
+        <h1 class="title">Proyecciones <span>Un lugar para proyectarse</span></h1> <!--Titulo-->
+    </header>
+
+    <section class="cites-section shadow">
+        <h2>Escritos</h2>
+        <div class="sec-info">
+            <div class="front-page">
+                <img src="img/cartas_A_milena.jpg" alt="Libro cartas a milena"> <!--Portadas-->
+                <a href="#" class="button">Libro</a>
+            </div> <!--sec-info-->
+            <blockquote>«Querida Milena, Ojalá el mundo se acabara mañana. <!--Citas de textos-->
+                Entonces podría tomar el próximo tren, llegar a tu puerta en Viena, 
+                y decir: «Ven conmigo, Milena. Vamos a amarnos sin escrúpulos 
+                ni miedo ni restricciones. Porque el mundo se acaba mañana». 
+                Tal vez no amemos irrazonablemente porque pensamos que tenemos tiempo, 
+                o tenemos que contar con el tiempo. Pero, ¿y si no tenemos tiempo? ¿O si el tiempo, 
+                tal y como lo conocemos, es irrelevante? Ah, si el mundo se acabara mañana. 
+                Podríamos ayudarnos mucho unos a otros».
+            </blockquote>
+        </div>
+        <div class="sec-info invert"> <!--Para que se muestre invertido en la p+agina-->
+            <div class="front-page">
+                <img src="img/images (1).jpg" alt="Pelicula - Eterno resplandor de una mente sin recuerdos">
+                <a href="#" class="button">Pelicula</a>
+            </div>
+            <blockquote>«Cuán feliz es el hombre inocente sin delito,
+                el mundo que se olvida del mundo olvidado,
+                el eterno resplandor de una mente sin recuerdos,
+                se cumplen las oraciones y se rechazan los deseos.».
+            </blockquote>
+        </div> <!--sec-info invert-->
+        <div class="sec-info">
+            <div class="front-page">
+                <img src="img/61xcUlIJ24L.jpg" alt="Libro La tregua">
+                <a href="#" class="button">Libro</a>
+            </div><!--front-page-->
+            <div class="cites">
+                <blockquote>«Posiblemente me quisiera, vaya uno a saberlo, pero lo cierto es que tenía una habilidad especial para herirme.»
+                </blockquote>
+                <blockquote>«Así estamos, cada uno en su orilla, sin odiarnos, sin amarnos, ajenos.»</blockquote>
+                <blockquote>«Ella me daba la mano y no hacía falta más. […] ella me daba la mano y eso era amor.»</blockquote>
+            </div><!--cites-->
+        </div> <!--sec-info-->
+    </section>
+
+    <section>
+        <div class="contact shadow">
+            <h2>Registrate para recibir proyectadas</h2>
+            <form action="#" method="post" class="forms"> <!--Formulario de registro-->
+                <div class="field">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tú nombre" required>
+                </div>
+                <div class="field">
+                    <label for="correo">Correo</label>
+                    <input type="text" id="correo" name="correo" placeholder="tu@correo.com" required>
+                </div>
+                <div class="field">
+                    <label for="genero">Género favorito</label>
+                    <select name="genero" id="genero">
+                        <optgroup label="Libros">
+                            <option value="novela">Novela</option>
+                            <option value="poesia">Poesía</option>
+                            <option value="ensayo">Ensayo</option>
+                        </optgroup>
+                        <optgroup label="Cine">
+                            <option value="drama">Drama</option>
+                            <option value="ciencia-ficcion">Ciencia Ficción</option>
+                            <option value="documental">Documental</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="mensaje">Alguna sugerencia de lo que te gustaría ver en la página</label>
+                    <textarea name="mensaje" id="mensaje" rows="5"></textarea>
+                </div>
+                <button type="submit" class="button">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer class="footer">
+        <p class="footer-copy">&copy; 2026 Proyecciones. Todos los derechos reservados. Joel Emmanuel Estrada Mendoza</p>
+    </footer>
+</body>
+</html>

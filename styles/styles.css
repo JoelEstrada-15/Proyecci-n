@@ -1,0 +1,293 @@
+:root{  /*Se declaran colores para no estar especificando en cada selector*/
+    --maincolor: #D8D2C6;
+    --secondarycolor: black;
+    --beigecolor: #FFFEED;
+    --brown: #8B6F4E;
+}
+
+/* global */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /*Para una mejor organizacion de la pagina*/
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* Selecciona todo */
+}
+
+body{
+    font-size: 1.6rem; /* 1rem = 10px*/
+    margin: 0;
+    background-color: var(--maincolor);
+
+}
+
+h2{
+    font-family: "EB Garamond", serif;
+    text-align: center;
+}
+
+.shadow{ /* Hace que la pagina tenga una carta con sombra*/
+    -webkit-box-shadow: 0px 20px 34px -16px rgba(32,36,42,0.3); 
+    -moz-box-shadow: 0px 20px 34px -16px rgba(32,36,42,0.3);
+    box-shadow: 0px 20px 34px -16px rgba(32,36,42,0.3);
+    background-color: #F4EFE3;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* Hero y navegación principal */
+
+.hero{
+    position: relative;
+    background-image: url("../img/dedos-dos-personas-acercandose.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::after{ /* Para darle un efecto difuminado al header */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15rem;
+    background: linear-gradient(to bottom, transparent, var(--maincolor));
+}
+.main-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main-nav nav{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2.4rem;
+    padding: 1.6rem;
+}
+
+.main-nav a{
+    color: var(--secondarycolor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.main-nav i{
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.main-nav a:hover{
+    background-color: var(--beigecolor);
+    color: var(--secondarycolor);
+}
+
+@media (max-width: 760px){
+
+    .hero{
+        height: 32rem;
+    }
+
+    .hero::after{
+        height: 10rem;
+    }
+
+    .main-nav nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem 1.2rem;
+        padding: 1rem;
+    }
+
+    .main-nav a{
+        font-size: 1.4rem;
+        padding: 0.6rem;
+    }
+}
+/* Titulo */
+.title{
+    font-family: "Dancing Script", cursive;
+    color: var(--secondarycolor);
+    text-align: center;
+    font-size: 6rem;
+    margin: 0;
+    padding: 2rem 4rem;
+    background-color: rgba(255, 254, 237, 0.6);  /* mismo crema, 60% opaco */
+    backdrop-filter: blur(0.8rem);
+
+}
+
+.title span{
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+@media (max-width: 760px){ /* Para hacer responsiva la página */
+    .title{
+        font-size: 4rem;
+        padding: 1.6rem 2rem;
+    }
+
+    .title span{
+        display: block;
+        font-size: 1.6rem;
+    }
+}
+
+/*Sección de citas*/
+
+
+.sec-info{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sec-info .front-page{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.sec-info .front-page img{
+    width: 100%;
+    border: 0.3rem solid var(--brown);
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.25);
+}
+
+.sec-info blockquote{
+    width: 70%;
+    font-family: "EB Garamond", serif;
+    background-color: var(--maincolor);
+    padding: 2rem;
+    border-left: 0.4rem solid var(--brown);
+
+}
+.sec-info .cites{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.sec-info .cites blockquote{
+    width: 100%;
+    margin: 0;
+}
+
+.sec-info.invert{
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 760px){
+    .sec-info, .sec-info.invert{
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .sec-info .front-page{
+        width: 100%;
+        max-width: 26rem;
+    }
+
+    .sec-info blockquote, .sec-info .cites{
+        width: 100%;
+    }
+    
+}
+
+/*Botones*/
+
+.button{
+    background-color: var(--beigecolor);
+    color: var(--secondarycolor);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    font-family: "EB Garamond", serif;
+}
+
+@media (min-width: 760px){
+    .button{
+        width: auto;
+    }
+}
+
+/*Forms*/
+.forms{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.forms fieldset{
+    border: none;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.field label{
+    font-weight: bold;
+    font-family: "EB Garamond", serif;
+}
+
+.field input, .field select, .field textarea{
+    font-family: "EB Garamond", serif;
+    font-size: 1.8rem;
+    padding: 1rem;
+    background-color: var(--maincolor);
+    border: 0.2rem solid var(--brown);
+    border-radius: 0.5rem;
+}
+
+.field input:focus, .field select:focus, .field textarea:focus{
+    outline: none;
+    border-color: var(--secondarycolor);
+}
+
+/* Haciendo que no se vea todo junto */
+.cites-section, .contact {
+    padding: 4rem 3rem;
+    max-width: 100rem;
+    margin: 0 auto 4rem;
+}
+
+@media (min-width: 760px){
+    /* Tarjetas con menos relleno */
+    .shadow, .cites-section, .contact{
+        padding: 2rem 1.6rem;
+    }
+}
+
+/* footer */
+.footer{
+    text-align: center;
+}
+
+@media (min-width: 760px){
+    .footer{
+        font-size: 3rem;
+    }
+}
